@@ -3,13 +3,11 @@
 
 #include <stdint.h>
 
-void load_binary_to_memory (char *fname, void *memory, uint32_t mem_size);
+void load_binary_to_memory (const char *fname, void *memory, const uint32_t mem_size);
 
-inline uint16_t extract_bits (uint16_t v, uint8_t bstart, uint8_t blength)
+static inline uint16_t extract_bits (const uint16_t v, const uint8_t bstart, const uint8_t blength)
 {
-	uint16_t mask;
-
-	mask = (1 << blength) - 1;
+	const uint16_t mask = (1 << blength) - 1;
 
 	return ((v >> bstart) & mask);
 }

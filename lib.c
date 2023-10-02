@@ -3,7 +3,7 @@
 
 #include "lib.h"
 
-void load_binary_to_memory (char *fname, void *memory, uint32_t mem_size)
+void load_binary_to_memory (const char *fname, void *memory, const uint32_t mem_size)
 {
 	FILE *fp;
 	uint32_t bsize;
